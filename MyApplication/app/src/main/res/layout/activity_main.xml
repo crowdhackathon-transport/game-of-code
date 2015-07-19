@@ -1,0 +1,194 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    <TabHost
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/tabHost"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></TabWidget>
+
+
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:id="@+id/map"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Select City"
+                        android:id="@+id/autoCompleteTextView"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <fragment
+                        xmlns:map="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/mapView"
+                        android:name="com.google.android.gms.maps.MapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="435dp"
+                        android:layout_weight="1.25" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Info"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <ListView
+                        android:layout_width="304dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/listView1" />
+
+                    <ListView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/listView2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/report"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    android:background="#ffffffff">
+                    <Button
+                        android:id="@+id/popbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+
+                        android:text="ΦΟΡΕΙΣ"
+                         />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:id="@+id/foreastxt" />
+
+                </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="68dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1"
+                        android:background="#ffffffff">
+                        <LinearLayout
+                            android:layout_width="255dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:weightSum="1"
+                            android:background="#ffffffff"
+                            android:layout_weight="0.71">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="\@near"
+                            android:id="@+id/textViewLocation"
+                            android:textColor="#ff1407ff"
+                            android:background="#ffffffff"
+                            android:textSize="@dimen/abc_text_size_body_1_material"
+                            android:textAlignment="center"
+                            android:singleLine="true"
+                            android:focusableInTouchMode="false"
+                            android:autoText="false" />
+
+                        </LinearLayout>
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/imageButton"
+                            android:background="@drawable/caution"
+                            android:layout_weight="0.20" /><![CDATA[
+
+                        android:layout_weight="0.16" />
+                    ]]>
+                    </LinearLayout>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/commentTxtBox"
+                        android:layout_weight="0.06"
+                        android:editable="true"
+                        android:clickable="true"
+                        android:hint="Add a comment"
+                        />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1"
+                        android:layout_weight="0.01">
+
+
+                        <Button
+                            android:layout_width="110dp"
+                            android:layout_height="60dp"
+                            android:text="REPORT"
+                            android:id="@+id/postbtn"
+                            android:onClick="onClick_AddRecord"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginTop="556dp" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="59dp"
+                            android:text="Clear"
+                            android:id="@+id/btncls"
+                            android:onClick="onClick_ClearAll"
+                            android:layout_alignTop="@+id/postbtn"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_weight="0.14" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</RelativeLayout>

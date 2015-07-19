@@ -1,0 +1,21 @@
+﻿<Placemark>
+	
+<name>2η Ν.ΖΩΗΣ</name>
+	
+<ExtendedData><SchemaData schemaUrl="#stathmoi_k_staseis_oasa">
+		
+<SimpleData name="Name">2η Ν.ΖΩΗΣ</SimpleData>
+		
+<SimpleData name="scode">030049</SimpleData>
+		
+<SimpleData name="street">ΗΠΕΙΡΟΥ</SimpleData>
+		
+<SimpleData name="mode">ΛΕΩΦΟΡΕΙΟ/ΤΡΟΛΛΕΥ</SimpleData>
+		
+<SimpleData name="id">188</SimpleData>
+	
+</SchemaData></ExtendedData>
+     
+<Point><coordinates>23.816340084204345,38.006831545133132</coordinates></Point>
+  
+</Placemark>

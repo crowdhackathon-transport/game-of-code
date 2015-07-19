@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+        <item
+            android:id="@+id/OASA"
+            android:title="ΟΑΣΑ"/>
+
+        <item
+            android:id="@+id/police"
+            android:title="Αστυνομία"/>
+
+        <item
+            android:id="@+id/fire"
+            android:title="Πυροσβεστική"/>
+
+    <item
+        android:id="@+id/troxaia"
+        android:title="Τροχαία"/>
+
+    </menu>
